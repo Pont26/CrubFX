@@ -1,6 +1,6 @@
 package application;
 	
-import com.demoncrud.dao.BookDao;
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,12 +13,9 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		
-		
-		
-		try {
-		    Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 
+		try {
+		    Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
 	        primaryStage.setTitle("Demo CRUD Application");
 	        primaryStage.setScene(new Scene(root));
 	        primaryStage.show();

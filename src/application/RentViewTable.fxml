@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<AnchorPane prefHeight="400.0" prefWidth="810.0" style="-fx-background-color: a8eefd;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.RentViewController">
+	 <children>
+                  <TableView fx:id="tvRent" layoutX="75.0" layoutY="22.0" prefHeight="314.0" prefWidth="688.0">
+                     <columns>
+                        <TableColumn fx:id="colRentId" prefWidth="51.20001220703125" text="Rent_id" />
+                        <TableColumn fx:id="colBookId" prefWidth="73.5999755859375" text="Book_id" />
+                        <TableColumn fx:id="colStudentId" prefWidth="88.800048828125" text="Student_id" />
+                        <TableColumn fx:id="colQty" prefWidth="80.79998779296875" text="Quantity" />
+                        <TableColumn fx:id="colRentDate" prefWidth="92.79998779296875" text="Rent date" />
+                        <TableColumn fx:id="colDueDate" prefWidth="106.39999389648438" text="Due Date" />
+                        <TableColumn fx:id="colRentDays" prefWidth="112.0" text="Rent days" />
+                        <TableColumn fx:id="colReturn" prefWidth="84.800048828125" text="Return" />
+                     </columns>
+                  </TableView>
+               </children>
+</AnchorPane>
+

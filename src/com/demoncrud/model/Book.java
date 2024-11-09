@@ -1,21 +1,47 @@
 package com.demoncrud.model;
 
-public class Books {
+import java.util.ArrayList;
+import java.util.List;
 
+import annotation.Column;
+import annotation.Id;
+import annotation.ManyToOne;
+import annotation.Table;
 
+@Table(name="book")
+public class Book {
+	@Id(name="id")
 	private int id;
+	@Column(name="title")
 	private String title;
+	@Column(name="author")
 	private String author;
+	@Column(name="year")
 	private int year;
+	@Column(name="pages")
 	private int pages;
+
 	
-	public Books(int id, String title, String author, int year, int pages) {
+	public Book(int id) {
+		this.id=id;
+	}
+	
+	public Book(int id, String title, String author, int year, int pages) {
 		this.id = id;
 		this.title = title;
 		this.author = author;
 		this.year = year;
 		this.pages = pages;
 	}
+	public Book( String title, String author, int year, int pages) {
+		this.title = title;
+		this.author = author;
+		this.year = year;
+		this.pages = pages;
+	}
+	
+	
+
 	
 
 	public int getId() {
