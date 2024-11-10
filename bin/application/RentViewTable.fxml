@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 
 <AnchorPane prefHeight="400.0" prefWidth="810.0" style="-fx-background-color: a8eefd;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.RentViewController">
-	 <children>
+	<children>
                   <TableView fx:id="tvRent" layoutX="75.0" layoutY="22.0" prefHeight="314.0" prefWidth="688.0">
                      <columns>
                         <TableColumn fx:id="colRentId" prefWidth="51.20001220703125" text="Rent_id" />

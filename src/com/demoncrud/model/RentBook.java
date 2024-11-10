@@ -31,10 +31,10 @@ public class RentBook {
         OVERDUE
     }
     
-    public RentBook(int id, Student student, Book book, int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
+    public RentBook(int id,  Book book,Student student, int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
         this.id = id;
-        this.student = student;
         this.book = book;
+        this.student = student;
         this.qty = qty;
         this.rentDay = rentDay;
         this.rentDate = rentDate;
@@ -42,9 +42,9 @@ public class RentBook {
         this.status = status;
     }
     
-    public RentBook(Student student, Book book, int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
-        this.student = student;
+    public RentBook( Book book, Student student,int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
         this.book = book;
+        this.student = student;
         this.qty = qty;
         this.rentDay = rentDay;
         this.rentDate = rentDate;
@@ -118,6 +118,10 @@ public class RentBook {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-
+	@Override
+	public String toString() {
+		return "RentBook [id=" + id + ", student=" + student + ", book=" + book + ", qty=" + qty + ", rentDay="
+				+ rentDay + ", rentDate=" + rentDate + ", returnDate=" + returnDate + ", status=" + status + "]";
+	}
 
 }

@@ -10,7 +10,7 @@ public class RentViewController {
 
 	//rent view table
 	@FXML
-	private TableView<?> tvRentViewTable;
+	private TableView<?> tvRent;
 	@FXML
 	private TableColumn<?,?> colRentId;
 	@FXML

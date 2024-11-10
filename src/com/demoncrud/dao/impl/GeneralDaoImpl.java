@@ -152,7 +152,11 @@ public abstract class GeneralDaoImpl<T> implements GeneralDao<T> {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             int count = 1;
             for(Object o : obj){
-              preparedStatement.setObject(count,o);
+            	 if (o instanceof java.util.Date) {
+                     preparedStatement.setObject(count, o, java.sql.Types.TIMESTAMP); // Specify TIMESTAMP for Date objects
+                 } else {
+                     preparedStatement.setObject(count, o); // Use default handling for other objects
+                 }
               count++;
             }
             int rowAffect = preparedStatement.executeUpdate();

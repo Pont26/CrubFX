@@ -2,9 +2,7 @@ package com.demoncrud.service;
 
 import java.util.List;
 
-import com.demoncrud.dao.impl.BookDaoImpl;
 import com.demoncrud.dao.impl.RentBookDaoImpl;
-import com.demoncrud.model.Book;
 import com.demoncrud.model.RentBook;
 
 public class RentBookService {

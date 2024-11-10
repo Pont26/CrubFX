@@ -45,16 +45,17 @@ public class BookController {
 	@FXML
 	private Button btnUpdate;
 	@FXML
-	private Button btnDelete;	
-    @FXML
+	private Button btnDelete;
+	
+	@FXML
 	public void initialize() {
-    System.out.println(" Book initializing is alrady working");
-    this.bookService=new BookService();
-    showBook();	
-    }
-
-		public void btnEvent(ActionEvent event) throws IOException {
-		  if(event.getSource() == (btnInsert)) {
+	System.out.println(" Book initializing is alrady working");
+	this.bookService=new BookService();
+	 showBook();	
+	}
+	
+	public void btnEvent(ActionEvent event) throws IOException {
+	if(event.getSource() == (btnInsert)) {
 			  insertRecord();
 		  }else if(event.getSource() == btnUpdate){
 			  updateRecord();
@@ -63,8 +64,6 @@ public class BookController {
 		  }
 		  clearTextField();
 		}
-
-
 	
 		public void showBook() {
 			List<Book> list = bookService.getAllBook();

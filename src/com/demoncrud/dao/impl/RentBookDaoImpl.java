@@ -26,30 +26,33 @@ public class RentBookDaoImpl extends GeneralDaoImpl<RentBook> {
 			Book book=this.bookDao.selectById(new Book(book_id));
 			return new RentBook(
 					rs.getInt("id"),
-					student,
 					book,
+					student,
 					rs.getInt("qty"),
-					rs.getInt("rentDay"),
-					rs.getDate("rentDate"),
-					rs.getDate("returnDate"),
+					rs.getInt("rent_day"),
+					rs.getDate("rent_date"),
+					rs.getDate("return_date"),
 					Status.valueOf(rs.getString("status"))
 					);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		}
 		
 	}
 	public void insert(RentBook rentBook) {
-		String querry="insert into rent_books (student_id,book_id,qty,rent_day,rent_date,return_date,status) values(?,?,?,?,?,?,?)";
-		super.executeUpdate(querry, rentBook.getStudent().getId(),
-				                    rentBook.getBook().getId(),
-				                    rentBook.getQty(),
-				                    rentBook.getRentDay(),
-				                    rentBook.getRentDate(),
-				                    rentBook.getRentDate(),
-				                    rentBook.getStatus());
+	    String query = "INSERT INTO rent_books (student_id, book_id, qty, rent_day, rent_date, return_date, status) VALUES (?, ?, ?, ?, ?, ?, CAST(? AS rentstatus))";
+
+	    super.executeUpdate(query, 
+	                        rentBook.getStudent().getId(),
+	                        rentBook.getBook().getId(),
+	                        rentBook.getQty(),
+	                        rentBook.getRentDay(),
+	                        rentBook.getRentDate(),
+	                        rentBook.getReturnDate(),
+	                        rentBook.getStatus().name()); 
 	}
+
+
 
 }

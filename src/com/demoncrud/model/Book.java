@@ -10,6 +10,7 @@ import annotation.Table;
 
 @Table(name="book")
 public class Book {
+
 	@Id(name="id")
 	private int id;
 	@Column(name="title")
@@ -84,6 +85,11 @@ public class Book {
 		this.pages = pages;
 	}
 	
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", pages=" + pages
+				+ "]";
+	}
 	
 
 }
