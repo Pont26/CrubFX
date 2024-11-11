@@ -3,6 +3,8 @@ package com.demoncrud.dao.impl;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import java.util.List;
+
 import com.demoncrud.model.Book;
 import com.demoncrud.model.RentBook;
 import com.demoncrud.model.RentBook.Status;
@@ -26,8 +28,8 @@ public class RentBookDaoImpl extends GeneralDaoImpl<RentBook> {
 			Book book=this.bookDao.selectById(new Book(book_id));
 			return new RentBook(
 					rs.getInt("id"),
-					book,
 					student,
+					book,
 					rs.getInt("qty"),
 					rs.getInt("rent_day"),
 					rs.getDate("rent_date"),
@@ -52,7 +54,37 @@ public class RentBookDaoImpl extends GeneralDaoImpl<RentBook> {
 	                        rentBook.getReturnDate(),
 	                        rentBook.getStatus().name()); 
 	}
-
-
+	
+	public RentBook getRentBookByStudentId(int studentId) {
+	    String query = "SELECT * FROM rent_books WHERE student_id = ?";
+	    List<RentBook> rentBooks = super.executeQuerry(query, studentId); 
+	    if (rentBooks.isEmpty()) {
+	        return null;
+	    } else {
+	        return rentBooks.get(0); 
+	    }
+	}
+	
+	public void updateRentBook(RentBook rentBook) {
+	    String query = "UPDATE rent_books SET  book_id = ?, qty = ?, rent_day = ?, rent_date = ?, return_date = ?, status = CAST(? AS rentstatus) " +
+	                   "WHERE student_id = ?";
+	     super.executeUpdate(query,
+	                       rentBook.getBook().getId(),
+	                       rentBook.getQty(),
+	                       rentBook.getRentDay(),
+	                       rentBook.getRentDate(),
+	                       rentBook.getReturnDate(),
+	                       rentBook.getStatus().name(),
+	                       rentBook.getStudent().getId());                   
+	        }
 
 }
+
+
+
+
+
+
+
+
+

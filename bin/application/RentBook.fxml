@@ -10,30 +10,26 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="810.0" style="-fx-background-color: a8eefd;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentBookController">
  <children>
-                  <VBox layoutX="225.0" layoutY="45.0" prefHeight="258.0" prefWidth="90.0" spacing="24.0">
+                  <VBox layoutX="233.0" layoutY="81.0" prefHeight="198.0" prefWidth="90.0" spacing="24.0">
                      <children>
-                        <Label text="Book id" />
                         <Label text="Student id" />
+                        <Label text="Book id" />
                         <Label text="Quantity" />
                         <Label text="Rent Day" />
-            <Label text="Rent Date" />
-            <Label text="Return Date" />
             <Label text="Status" />
                      </children>
                   </VBox>
-                  <VBox layoutX="335.0" layoutY="45.0" prefHeight="258.0" prefWidth="160.0" spacing="15.0">
+                  <VBox layoutX="335.0" layoutY="75.0" prefHeight="198.0" prefWidth="160.0" spacing="15.0">
                      <children>
-                        <TextField fx:id="tfBookId" />
                         <TextField fx:id="tfStudentId" />
+                        <TextField fx:id="tfBookId" />
                         <TextField fx:id="tfQty" />
             <TextField fx:id="tfRentDay" />
-                        <TextField fx:id="tfRentDate" />
-            <TextField fx:id="tfReturnDate" />
             <TextField fx:id="tfStatus" />
                      </children>
                   </VBox>
-                  <Button fx:id="btnRent" layoutX="340.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="75.0" text="Rent" />
-                  <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="347.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+                  <Button fx:id="btnRent" layoutX="288.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="84.0" text="Rent" />
+                  <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="297.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/Bookmark.png" />
                      </image>

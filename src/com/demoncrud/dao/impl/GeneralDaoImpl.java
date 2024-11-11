@@ -57,7 +57,6 @@ public abstract class GeneralDaoImpl<T> implements GeneralDao<T> {
         String query=null;
         try {
         String idColumn=getColumnName(obj,"Id");
-        System.out.println("id Column=="+idColumn);
         Field field=DaoUtail.getFieldsFromObj(obj,true,idColumn).get(0);
         field.setAccessible(true);
         query  = "SELECT  * From " + this.tableName + " where "+idColumn+" = ?";
@@ -75,6 +74,9 @@ public abstract class GeneralDaoImpl<T> implements GeneralDao<T> {
         }
         return null;
     }
+    
+
+
     @Override
     //select all
     public List<T> selectAll(){
@@ -82,7 +84,7 @@ public abstract class GeneralDaoImpl<T> implements GeneralDao<T> {
         return executeQuerry(sql);
     }
 
-    private List<T> executeQuerry(String query,Object... values){
+    public List<T> executeQuerry(String query,Object... values){
         List<T> list= new ArrayList<>();
         Connection connection = null;
         try {
@@ -109,6 +111,9 @@ public abstract class GeneralDaoImpl<T> implements GeneralDao<T> {
             throw new RuntimeException(e);
         }
     }
+    
+  
+
     //insert,update,delete
     private void executeUpdate(String type,Object obj,String query,String... conductions){
         try {

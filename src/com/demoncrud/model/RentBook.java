@@ -31,7 +31,7 @@ public class RentBook {
         OVERDUE
     }
     
-    public RentBook(int id,  Book book,Student student, int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
+    public RentBook(int id, Student student, Book book, int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
         this.id = id;
         this.book = book;
         this.student = student;
@@ -42,7 +42,7 @@ public class RentBook {
         this.status = status;
     }
     
-    public RentBook( Book book, Student student,int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
+    public RentBook(  Student student,Book book,int qty, int rentDay, Date rentDate, Date returnDate, Status status) {
         this.book = book;
         this.student = student;
         this.qty = qty;
@@ -66,14 +66,22 @@ public class RentBook {
 	public Student getStudent() {
 		return student;
 	}
+	public int getStudentId() {
+		return student.getId();
+	}
 
 	public void setStudent(Student student) {
 		this.student = student;
 	}
+	
 
 	public Book getBook() {
 		return book;
 	}
+	public int getBookId() {
+		return book.getId();
+	}
+	
 
 	public void setBook(Book book) {
 		this.book = book;

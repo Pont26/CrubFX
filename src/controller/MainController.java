@@ -14,6 +14,9 @@ public class MainController {
     @FXML
     private MenuItem rentItem;
     @FXML
+    private MenuItem bookReturnItem;
+
+    @FXML
     private MenuItem tvRentItem;
     @FXML
     private AnchorPane bookPane;
@@ -23,13 +26,16 @@ public class MainController {
     private AnchorPane rentPane;
     @FXML
     private AnchorPane tvRentPane;
-    
+    @FXML
+    private AnchorPane returnViewPane;
+        
 	    @FXML
 	    public void initialize() {
 	        studentPane.setVisible(false);
 	        bookPane.setVisible(true);
 	        rentPane.setVisible(false);
 	        tvRentPane.setVisible(false);
+	        bookReturnItem.setVisible(true);
 	    }
 	    
 	    @FXML
@@ -41,7 +47,9 @@ public class MainController {
 	        } else if (event.getSource() == rentItem) {
 	            showRentForm();
 	        }else if(event.getSource() == tvRentItem) {
-	        	showRentTable();
+	        	showReport();
+	        }else if(event.getSource() == bookReturnItem) {
+	        	showReturnForm();
 	        }
 	    }
 	
@@ -50,6 +58,8 @@ public class MainController {
 	        bookPane.setVisible(false);
 	        rentPane.setVisible(false);
 	        tvRentPane.setVisible(false);
+	        returnViewPane.setVisible(false);
+
 	    }
 	
 	    private void showBookForm() {
@@ -57,6 +67,7 @@ public class MainController {
 	        bookPane.setVisible(true);
 	        rentPane.setVisible(false);
 	        tvRentPane.setVisible(false);
+	        returnViewPane.setVisible(false);
 	    }
 	    
 	    private void showRentForm() {
@@ -64,14 +75,25 @@ public class MainController {
 	        bookPane.setVisible(false);
 	        rentPane.setVisible(true);
 	        tvRentPane.setVisible(false);
+	        returnViewPane.setVisible(false);
 	
 	    }
 	    
-	    private void showRentTable() {
+	    private void showReport() {
 	    	  studentPane.setVisible(false);
 	          bookPane.setVisible(false);
 	          rentPane.setVisible(false);
 	          tvRentPane.setVisible(true);
+	         returnViewPane.setVisible(false);
 	    	
 	    }
+	   
+	    private void showReturnForm() {
+	        studentPane.setVisible(false);
+	        bookPane.setVisible(false);
+	        rentPane.setVisible(false);
+	        tvRentPane.setVisible(false);
+	        returnViewPane.setVisible(true); 	   
+
 	}
+}
