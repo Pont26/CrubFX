@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="850.0" style="-fx-background-color: a8eefd;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
+<AnchorPane prefHeight="450.0" prefWidth="810.0" style="-fx-background-color: a8eefd;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
  <children>
-                  <VBox layoutX="87.0" layoutY="24.0" prefHeight="145.0" prefWidth="58.0" spacing="17.0">
+                  <VBox layoutX="70.0" layoutY="94.0" prefHeight="159.0" prefWidth="58.0" spacing="17.0">
                      <children>
                         <Label>
                            <font>
@@ -42,7 +42,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox layoutX="151.0" layoutY="57.0" prefHeight="177.0" prefWidth="144.0" spacing="10.0">
+                  <VBox layoutX="149.0" layoutY="128.0" prefHeight="150.0" prefWidth="144.0" spacing="10.0">
                      <children>
                         <TextField fx:id="tfTitle" />
                         <TextField fx:id="tfAuthor" layoutX="10.0" layoutY="10.0" />
@@ -50,17 +50,17 @@
                         <TextField fx:id="tfPages" />
                      </children>
                   </VBox>
-                  <TableView fx:id="tvBook" layoutX="361.0" layoutY="32.0" onMouseClicked="#handleMouseAction" prefHeight="262.0" prefWidth="434.0">
+                  <TableView fx:id="tvBook" layoutX="346.0" layoutY="70.0" onMouseClicked="#handleMouseAction" prefHeight="282.0" prefWidth="424.0">
                      <columns>
                         <TableColumn fx:id="colId" prefWidth="34.39996337890625" text="Id" />
-                        <TableColumn fx:id="colTitle" prefWidth="124.0" text="Title" />
-                        <TableColumn fx:id="colAuthor" prefWidth="112.00003051757812" text="Author" />
-                        <TableColumn fx:id="colYear" prefWidth="80.79998779296875" text="Year" />
-                        <TableColumn fx:id="colPages" prefWidth="84.00006103515625" text="Pages" />
+                        <TableColumn fx:id="colTitle" prefWidth="110.4000244140625" text="Title" />
+                        <TableColumn fx:id="colAuthor" prefWidth="108.0" text="Author" />
+                        <TableColumn fx:id="colYear" prefWidth="86.4000244140625" text="Year" />
+                        <TableColumn fx:id="colPages" prefWidth="82.39990234375" text="Pages" />
                      </columns>
                   </TableView>
-                  <Button fx:id="btnInsert" layoutX="70.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="66.0" text="Save" />
-                  <Button fx:id="btnUpdate" layoutX="168.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnEvent" text="Update">
+                  <Button fx:id="btnInsert" layoutX="54.0" layoutY="335.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="75.0" text="Save" />
+                  <Button fx:id="btnUpdate" layoutX="149.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnEvent" text="Update">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -69,7 +69,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnDelete" layoutX="268.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="75.0" text="Delete">
+                  <Button fx:id="btnDelete" layoutX="245.0" layoutY="335.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="82.0" text="Delete">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -78,11 +78,16 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="71.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="62.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../DemoCrud/src/img/Plus.png" />
                      </image>
                   </ImageView>
+      <Label layoutX="321.0" layoutY="25.0" prefHeight="35.0" prefWidth="130.0" styleClass="title-label" text="Books View">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
                </children>
 
 </AnchorPane>

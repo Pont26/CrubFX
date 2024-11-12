@@ -14,18 +14,22 @@ import com.demoncrud.service.BookService;
 import com.demoncrud.service.RentBookService;
 import com.demoncrud.service.StudentService;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class RentBookInformationController {
     private RentBookService rentBookServie;
     private StudentService studentService;
     private BookService bookService;
     public int studentId = 0;
-    private  Date rentDate;
     private int rentDay;
 
     @FXML
@@ -46,13 +50,18 @@ public class RentBookInformationController {
     private TextField tfBookQty;
     @FXML
     private Button submitBtn;
+    @FXML
+    private Button cancelbtn;
+    
 
     @FXML
     public void initialize() {
         rentBookServie = new RentBookService();
         studentService = new StudentService();
         bookService = new BookService();
+
     }
+
     
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -80,8 +89,16 @@ public class RentBookInformationController {
     }
 
 
+    @FXML
     public void btnEvent(ActionEvent event) throws IOException {
+    	if(event.getSource().equals(submitBtn)) {
     	updateRentBook();
+    	}else if(event.getSource().equals(cancelbtn)) {
+    		 Stage stage = (Stage) cancelbtn.getScene().getWindow();
+    	      stage.close();
+   
+    	}
+    	
     }
 
     private void updateRentBook() {
@@ -102,7 +119,7 @@ public class RentBookInformationController {
 
                RentBook rentBook = new RentBook(student, book, bookQty, rentDay, rentDate, returnDate, status);
                rentBookServie.updateRentBook(rentBook);
-               displayMessage(Alert.AlertType.CONFIRMATION,"Return Book Sucessed");
+               displayMessage(Alert.AlertType.INFORMATION,"Return Process Successful! Thanks for using our service");
            } catch (ParseException e) {
                e.printStackTrace();
            }
@@ -152,6 +169,8 @@ public class RentBookInformationController {
     }
 
     
+
+
     private void displayMessage(Alert.AlertType alertType, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle("Deletion Status");

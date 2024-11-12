@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="810.0" style="-fx-background-color: a8eefd;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentViewTableController">
+<AnchorPane prefHeight="450.0" prefWidth="810.0" style="-fx-background-color: a8eefd;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentViewTableController">
 	<children>
-                  <TableView fx:id="tvRent" layoutX="51.0" layoutY="28.0" prefHeight="314.0" prefWidth="731.0">
+                  <TableView fx:id="tvRent" layoutX="50.0" layoutY="68.0" prefHeight="332.0" prefWidth="731.0">
                      <columns>
                         <TableColumn fx:id="colRentId" prefWidth="46.399993896484375" text="id" />
-                        <TableColumn fx:id="colStudentId" prefWidth="72.80001831054688" text="Student id" />
-                        <TableColumn fx:id="colBookId" prefWidth="77.59996032714844" text="Book id" />
-                        <TableColumn fx:id="colQty" prefWidth="73.60003662109375" text="Quantity" />
-                        <TableColumn fx:id="colRentDay" prefWidth="92.79998779296875" text="Rend day" />
-                        <TableColumn fx:id="colRentDate" prefWidth="134.4000244140625" text="Rent date" />
-                        <TableColumn fx:id="colReturnDate" prefWidth="148.79998779296875" text="Return date" />
-            <TableColumn fx:id="colStatus" prefWidth="83.199951171875" text="Status" />
+                        <TableColumn fx:id="colStudentId" prefWidth="93.60000610351562" text="Student id" />
+                        <TableColumn fx:id="colBookId" prefWidth="81.59996032714844" text="Book id" />
+                        <TableColumn fx:id="colQty" prefWidth="67.199951171875" text="Quantity" />
+                        <TableColumn fx:id="colRentDay" prefWidth="96.0" text="Rend day" />
+                        <TableColumn fx:id="colRentDate" prefWidth="137.5999755859375" text="Rent date" />
+                        <TableColumn fx:id="colReturnDate" prefWidth="132.800048828125" text="Return date" />
+            <TableColumn fx:id="colStatus" minWidth="7.0" prefWidth="73.5999633789063" text="Status" />
                      </columns>
                   </TableView>
+      <Label layoutX="360.0" layoutY="28.0" styleClass="title-label" text="Rent Book Record" />
                </children>
 </AnchorPane>

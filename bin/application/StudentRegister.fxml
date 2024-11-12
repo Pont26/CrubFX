@@ -10,48 +10,49 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="850.0" style="-fx-background-color: a8eefd; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
+<AnchorPane prefHeight="450.0" prefWidth="810.0" style="-fx-background-color: a8eefd; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
 	<!-- TODO Add Nodes -->
 	<children>
-                  <VBox layoutX="55.0" layoutY="86.0" prefHeight="140.0" prefWidth="96.0" spacing="23.0">
+                  <VBox layoutX="33.0" layoutY="150.0" prefHeight="114.0" prefWidth="125.0" spacing="23.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="87.0" text="Student Name" />
-                        <Label prefHeight="18.0" prefWidth="59.0" text="email" />
-                        <Label prefHeight="18.0" prefWidth="59.0" text="address" />
+                        <Label prefHeight="18.0" prefWidth="122.0" text="Student Name" />
+                        <Label prefHeight="18.0" prefWidth="59.0" text="Email" />
+                        <Label prefHeight="18.0" prefWidth="59.0" text="Address" />
                      </children>
                   </VBox>
-                  <VBox layoutX="168.0" layoutY="82.0" prefHeight="122.0" prefWidth="136.0" spacing="15.0">
+                  <VBox layoutX="168.0" layoutY="146.0" prefHeight="122.0" prefWidth="136.0" spacing="15.0">
                      <children>
                         <TextField fx:id="tfName" prefHeight="26.0" prefWidth="114.0" />
                         <TextField fx:id="tfEmail" />
                         <TextField fx:id="tfAddress" />
                      </children>
                   </VBox>
-                  <TableView fx:id="tvStudent" layoutX="380.0" layoutY="41.0" onMouseClicked="#handleMouseAction2" prefHeight="254.0" prefWidth="422.0">
+                  <TableView fx:id="tvStudent" layoutX="349.0" layoutY="60.0" onMouseClicked="#handleMouseAction2" prefHeight="271.0" prefWidth="419.0">
                      <columns>
-                        <TableColumn fx:id="colId1" prefWidth="71.199951171875" text="student id" />
-                        <TableColumn fx:id="colName" prefWidth="87.19992065429688" text="name" />
+                        <TableColumn fx:id="colId1" prefWidth="64.0" text="id" />
+                        <TableColumn fx:id="colName" prefWidth="94.4000244140625" text="name" />
                         <TableColumn fx:id="colEmail" prefWidth="133.5999755859375" text="email" />
                         <TableColumn fx:id="colAddress" prefWidth="132.7999267578125" text="address" />
                      </columns>
                   </TableView>
-                  <Button fx:id="btnDelete1" layoutX="273.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="82.0" text="Delete" />
-                  <Button fx:id="btnUpdate1" layoutX="160.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="86.0" text="Update" />
-                  <Button fx:id="btnInsert1" layoutX="51.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="78.0" text="Save" />
-                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="58.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                  <Button fx:id="btnDelete1" layoutX="255.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="82.0" text="Delete" />
+                  <Button fx:id="btnUpdate1" layoutX="141.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="90.0" text="Update" />
+                  <Button fx:id="btnInsert1" layoutX="39.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="26.0" prefWidth="90.0" text="Save" />
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="46.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../DemoCrud/src/img/Plus.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="168.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="151.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../DemoCrud/src/img/Restart.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="280.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="263.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../DemoCrud/src/img/Cancel.png" />
                      </image>
                   </ImageView>
+      <Label layoutX="271.0" layoutY="30.0" prefHeight="18.0" prefWidth="222.0" styleClass="title-label" text="Student Table View" />
                </children>
 </AnchorPane>

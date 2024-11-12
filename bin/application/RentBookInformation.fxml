@@ -22,16 +22,18 @@
       </VBox>
       <VBox layoutX="202.0" layoutY="51.0" prefHeight="354.0" prefWidth="146.0" spacing="23.0">
          <children>
-            <TextField fx:id="tfStudentId" />
-            <TextField fx:id="tfBookId" />
-            <TextField fx:id="tfReturnDate" />
-            <TextField fx:id="tfRentDate" />
-            <TextField fx:id="tfRentDay" />
-            <TextField fx:id="tfLateDay" />
-            <TextField fx:id="tfStatus" />
-            <TextField fx:id="tfBookQty" />
+            <TextField fx:id="tfStudentId" editable="false" />
+            <TextField fx:id="tfBookId" editable="false" />
+            <TextField fx:id="tfReturnDate" editable="false" />
+            <TextField fx:id="tfRentDate" editable="false" />
+            <TextField fx:id="tfRentDay" editable="false" />
+            <TextField fx:id="tfLateDay" editable="false" />
+            <TextField fx:id="tfStatus" editable="false" />
+            <TextField fx:id="tfBookQty" editable="false" />
          </children>
       </VBox>
-      <Button fx:id="submitBtn" layoutX="197.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="32.0" prefWidth="70.0" text="Submit" />
+      <Button fx:id="submitBtn" layoutX="143.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="32.0" prefWidth="70.0" text="Submit" />
+      <Button fx:id="cancelbtn" layoutX="244.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnEvent" prefHeight="32.0" prefWidth="78.0" text="Cancel" />
+      <Label layoutX="152.0" layoutY="23.0" styleClass="title-label" text="Return Book Detail Infomation" />
    </children>
 </AnchorPane>

@@ -68,8 +68,9 @@ public class ReturnViewController {
             primaryStage.setScene(scene);
             primaryStage.show();
 
-            Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            currentStage.close();
+          // Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+          // currentStage.close();
+          
         } catch (IOException e) {
             e.printStackTrace();
         } catch (IndexOutOfBoundsException e) {
